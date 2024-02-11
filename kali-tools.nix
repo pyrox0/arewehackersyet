@@ -3,6 +3,7 @@ with pkgs;
 let
   todo = "todo";
   cantfind = "cantfind";
+  broken = "broken";
 in {
   
   "0trace" = todo;
@@ -365,7 +366,7 @@ in {
   sslscan = pkgs.sslscan;
   sslsniff = todo;
   sslsplit = pkgs.sslsplit;
-  sslyze = cantfind; # removed/broken
+  sslyze = broken; # removed/broken
   statsprocessor = todo;
   steghide = pkgs.steghide;
   stegsnow = todo;
@@ -403,7 +404,7 @@ in {
   veil = todo;
   vinetto = todo;
   voiphopper = todo;
-  volatility = cantfind; # removed/broken
+  volatility = broken; # removed/broken
   wafw00f = pkgs.wafw00f;
   wapiti = pkgs.wapiti;
   watobo = todo;

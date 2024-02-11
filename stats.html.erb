@@ -22,7 +22,7 @@
                     Packages in <span class="text-danger">red</span> have been looked for and appear to be unpackaged
                 </li>
                 <li>
-                    Packages in <span class="text-danger">violet</span> could have been previously packaged and appear to be broken/removed (deprecated/security risks, i.e. python2,etc.)
+                    Packages in <span class="text-danger">yellow</span> could have been previously packaged and appear to be broken/removed (deprecated/security risks, i.e. python2,etc.)
                 </li>
                 <li>
                     Packages in <span class="text-secondary">gray</span> haven't been checked yet
@@ -52,6 +52,7 @@
                                     <div class="progress-bar bg-success" role="progressbar" style="width: <%= 100 * packages.count { |_, val| val != "todo" && val != "cantfind" } / packages.count.to_f %>%"><%= packages.count { |_, val| val != "todo" && val != "cantfind" } %></div>
                                     <div class="progress-bar bg-danger" role="progressbar" style="width: <%= 100 * packages.count { |_, val|val == "cantfind" } / packages.count.to_f %>%"><%= packages.count { |_, val| val == "cantfind" } %></div>
                                     <div class="progress-bar bg-secondary" role="progressbar" style="width: <%= 100 * packages.count { |_, val|val == "todo" } / packages.count.to_f %>%"><%= packages.count { |_, val| val == "todo" } %></div>
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: <%= 100 * packages.count { |_, val|val == "broken" } / packages.count.to_f %>%"><%= packages.count { |_, val| val == "broken" } %></div>
                                 </div>
                             </div>
                         </div>
@@ -71,6 +72,8 @@
                                                 <tr class="alert-secondary">
                                             <% elsif package_val == "cantfind" %>
                                                 <tr class="alert-danger">
+                                            <% elsif package_val == "broken" %>
+                                                <tr class="alert-warning">
                                             <% else %>
                                                 <tr class="alert-success">
                                             <% end %>
