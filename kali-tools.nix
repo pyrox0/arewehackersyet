@@ -365,7 +365,7 @@ in {
   sslscan = pkgs.sslscan;
   sslsniff = todo;
   sslsplit = pkgs.sslsplit;
-  sslyze = todo;
+  sslyze = cantfind; # removed/broken
   statsprocessor = todo;
   steghide = pkgs.steghide;
   stegsnow = todo;
