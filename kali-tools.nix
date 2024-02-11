@@ -137,7 +137,7 @@ in {
   gqrx-sdr = pkgs.gqrx;
   gr-air-modes = todo;
   gr-iqbal = todo;
-  gr-osmosdr = todo; #removed required python2 => pkgs.gnuradio3_7.pkgs.osmosdr;
+  gr-osmosdr = pkgs.gnuradio3_9.pkgs.osmosdr; #removed required python2 => pkgs.gnuradio3_7.pkgs.osmosdr;
   grokevt = todo;
   guymager = todo;
   gvm = todo;
