@@ -6,8 +6,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: cachix/install-nix-action@v8
+    - uses: actions/checkout@v3
+    - uses: cachix/install-nix-action@v22
     - name: build
       run: nix-build ./stats.nix
     - run: mkdir ./pages
