@@ -1,7 +1,7 @@
 { pkgs, ... }:
 with pkgs;
 let
-  todo = "tocheck-if-is-packaged-in-nixpkgs";
+  todo = "todo";
   cantfind = "cantfind";
 in {
   
