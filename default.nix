@@ -21,7 +21,7 @@ rec {
     openvpn = pkgs.openvpn;
     p7zip-full = pkgs.p7zip.override (_: { enableUnfree = true; });
     parted = pkgs.parted;
-    rfkill = pkgs.rfkill;
+    rfkill = pkgs.utillinux;
     samba = pkgs.samba;
     snmp = pkgs.net-snmp;
     sudo = pkgs.sudo;
