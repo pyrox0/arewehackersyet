@@ -26,3 +26,4 @@ jobs:
           # Let's not show merges in the changelog
           show_merges: false
           # Have some prefix and a suffix. Use '|' to keep newlines
+          keep_updating: true
