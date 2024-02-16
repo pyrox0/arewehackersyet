@@ -307,7 +307,7 @@ in {
   rekall-core = todo;
   rephrase = todo;
   responder = pkgs.responder;
-  rfcat = pkgs.pythonPackages.rfcat;
+  rfcat = pkgs.python312Packages.rfcat;
   rfdump = todo;
   rfkill = pkgs.utillinux;
   rifiuti = todo;
