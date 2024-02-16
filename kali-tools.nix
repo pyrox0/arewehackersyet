@@ -25,7 +25,7 @@ in {
   assetfinder = pkgs.assetfinder;
   autopsy = todo;
   backdoor-factory = todo;
-  bed = todo;
+  bed = cantfind;
   beef-xss = todo;
   bettercap = pkgs.bettercap;
   binwalk = pkgs.python3Packages.binwalk-full;
@@ -37,7 +37,7 @@ in {
   bluez-hcidump = todo;
   braa = pkgs.braa;
   btscanner = todo;
-  bulk-extractor = todo;
+  bulk-extractor = pkgs.bulk_extractor;
   bully = pkgs.bully;
   burpsuite = pkgs.burpsuite;
   bytecode-viewer = pkgs.bytecode-viewer;
@@ -73,7 +73,7 @@ in {
   darkstat = pkgs.darkstat;
   davtest = pkgs.davtest;
   dbd = todo;
-  dc3dd = todo;
+  dc3dd = pkgs.dc3dd;
   dcfldd = pkgs.dcfldd;
   ddrescue = pkgs.ddrescue;
   default-mysql-server = todo;
@@ -82,7 +82,7 @@ in {
   dhcpig = todo;
   dirb = pkgs.dirb;
   dirbuster = todo;
-  dmitry = todo;
+  dmitry = pkgs.dmitry;
   dns2tcp = todo;
   dnschef = pkgs.dnschef;
   dnsenum = pkgs.dnsenum;
@@ -105,7 +105,7 @@ in {
   exifprobe = pkgs.exifprobe;
   exiv2 = pkgs.exiv2;
   exploitdb = pkgs.exploitdb;
-  ext3grep = todo;
+  ext3grep = pkgs.ext3grep;
   ext4magic = pkgs.ext4magic;
   extundelete = pkgs.extundelete;
   eyewitness = todo;
@@ -125,9 +125,9 @@ in {
   fping = pkgs.fping;
   fragrouter = todo;
   freeradius-wpe = todo;
-  freerdp2-x11 = todo;
+  freerdp2-x11 = pkgs.freerdp;
   ftester = todo;
-  fwbuilder = todo;
+  fwbuilder = pkgs.fwbuilder;
   galleta = pkgs.galleta;
   gdb = pkgs.gdb;
   ghidra = pkgs.ghidra;
@@ -163,7 +163,7 @@ in {
   hyperion = todo;
   iaxflood = todo;
   ike-scan = pkgs.ike-scan;
-  impacket-scripts = todo;
+  impacket-scripts = pkgs.python311Packages.impacket;
   inetsim = todo;
   inspectrum = pkgs.inspectrum;
   intrace = todo;
@@ -185,7 +185,8 @@ in {
   killerbee = todo;
   kismet = pkgs.kismet;
   laudanum = todo;
-  lbd = todo;
+  # Source : https://github.com/craig/ge.mine.nu/tree/master/lbd
+  lbd = cantfind; # original website source is dead/404
   legion = todo;
   libfindrtp = todo;
   libfreefare-bin = pkgs.libfreefare;
@@ -202,7 +203,7 @@ in {
   maryam = todo;
   maskprocessor = todo;
   masscan = pkgs.masscan;
-  md5deep = todo;
+  md5deep = pkgs.hashdeep;
   mdbtools = pkgs.mdbtools;
   mdk3 = todo;
   mdk4 = pkgs.mdk4;
@@ -306,7 +307,7 @@ in {
   rekall-core = todo;
   rephrase = todo;
   responder = pkgs.responder;
-  rfcat = todo;
+  rfcat = pkgs.pythonPackages.rfcat;
   rfdump = todo;
   rfkill = pkgs.utillinux;
   rifiuti = todo;
@@ -327,11 +328,13 @@ in {
   sandsifter = todo;
   sbd = todo;
   scalpel = pkgs.scalpel;
+  # https://github.com/NixOS/nixpkgs/pull/288039
   scrounge-ntfs = todo;
   sctpscan = todo;
   seclists = pkgs.seclists;
   secure-socket-funneling-windows-binaries = todo;
   sentrypeer = todo;
+  #https://github.com/trustedsec/social-engineer-toolkit/
   set = todo;
   sfuzz = todo;
   shellnoob = pkgs.shellnoob;
@@ -371,6 +374,7 @@ in {
   steghide = pkgs.steghide;
   stegsnow = todo;
   stunnel4 = todo;
+  #https://github.com/hemp3l/sucrack
   sucrack = todo;
   swaks = pkgs.swaks;
   t50 = todo;
@@ -399,7 +403,7 @@ in {
   uniscan = todo;
   unix-privesc-check = todo;
   "unrar | unar" = pkgs.unrar;
-  upx-ucl = todo;
+  upx-ucl = pkgs.upx;
   urlcrazy = todo;
   veil = todo;
   vinetto = todo;
@@ -412,6 +416,7 @@ in {
   webacoo = todo;
   webscarab = todo;
   webshells = todo;
+  #https://github.com/epinna/weevely3
   weevely = todo;
   wfuzz = pkgs.wfuzz;
   whatweb = pkgs.whatweb;
@@ -421,6 +426,7 @@ in {
   windows-privesc-check = todo;
   winregfs = todo;
   wireshark = pkgs.wireshark;
+  #https://github.com/byt3bl33d3r/WitnessMe
   witnessme = todo;
   wordlists = pkgs.wordlists;
   wpscan = pkgs.wpscan;
