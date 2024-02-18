@@ -330,7 +330,7 @@ in {
   sbd = cantfind;
   scalpel = pkgs.scalpel;
   # https://github.com/NixOS/nixpkgs/pull/288039
-  scrounge-ntfs = pkgs.scrounge-ntfs;
+  scrounge-ntfs = todo;
   sctpscan = cantfind;
   seclists = pkgs.seclists;
   secure-socket-funneling-windows-binaries = cantfind;
