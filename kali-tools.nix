@@ -140,6 +140,7 @@ in {
   gr-iqbal = todo;
   gr-osmosdr = pkgs.gnuradio3_9.pkgs.osmosdr; #removed required python2 => pkgs.gnuradio3_7.pkgs.osmosdr;
   grokevt = cantfind;
+  #https://github.com/NixOS/nixpkgs/pull/278529
   guymager = cantfind;
   gvm = cantfind;
   hackrf = pkgs.hackrf;
@@ -149,8 +150,10 @@ in {
   hashcat = pkgs.hashcat;
   hashcat-utils = pkgs.hashcat-utils;
   hashdeep = pkgs.hashdeep;
+  #https://github.com/NixOS/nixpkgs/pull/288654
   hashid = cantfind;
   hashrat = pkgs.hashrat;
+  #https://github.com/NixOS/nixpkgs/pull/288674
   hb-honeypot = cantfind;
   heartleech = cantfind;
   hexinject = cantfind;
@@ -182,11 +185,12 @@ in {
   jsql-injection = cantfind;
   kali-autopilot = cantfind;
   kalibrate-rtl = pkgs.kalibrate-rtl;
-  killerbee = cantfind;
+  killerbee = pkgs.killerbee;
   kismet = pkgs.kismet;
+  #https://github.com/NixOS/nixpkgs/pull/289374
   laudanum = cantfind;
   # Source : https://github.com/craig/ge.mine.nu/tree/master/lbd
-  # WIP
+  #https://github.com/NixOS/nixpkgs/pull/289525
   lbd = cantfind;
   legion = cantfind;
   libfindrtp = cantfind;
@@ -197,8 +201,10 @@ in {
   lime-forensics = cantfind;
   lvm2 = pkgs.lvm2;
   lynis = pkgs.lynis;
+  #https://github.com/NixOS/nixpkgs/pull/289532
   mac-robber = cantfind;
   macchanger = pkgs.macchanger;
+  #https://github.com/NixOS/nixpkgs/pull/289533
   magicrescue = cantfind;
   maltego = pkgs.maltego;
   maryam = cantfind;
@@ -219,14 +225,15 @@ in {
   mimikatz = cantfind;
   minicom = pkgs.minicom;
   miredo = pkgs.miredo;
+  #https://github.com/NixOS/nixpkgs/pull/289535
   missidentify = cantfind;
   mitmproxy = pkgs.mitmproxy;
   msfpc = pkgs.msfpc;
   multimon-ng = pkgs.multimon-ng;
-  myrescue = cantfind;
+  myrescue = pkgs.myrescue;
   nasm = pkgs.nasm;
   nasty = pkgs.nasty;
-  nbtscan = cantfind;
+  nbtscan = pkgs.nbtscan;
   ncat = cantfind;
   ncat-w32 = cantfind;
   ncrack = pkgs.ncrack;
@@ -256,12 +263,12 @@ in {
   padbuster = pkgs.padbuster;
   paros = cantfind;
   parted = pkgs.parted;
-  pasco = cantfind;
+  pasco = pkgs.pasco;
   passing-the-hash = cantfind;
   patator = pkgs.python3Packages.patator;
   pdf-parser = pkgs.pdf-parser;
   pdfcrack = pkgs.pdfcrack;
-  pdfid = cantfind;
+  pdfid = pkgs.pdfid;
   peass = cantfind;
   pev = pkgs.pev;
   php = pkgs.php;
@@ -279,7 +286,7 @@ in {
   proxychains4 = pkgs.proxychains;
   proxytunnel = cantfind;
   pst-utils = todo;
-  ptunnel = todo;
+  ptunnel = pkgs.ptunnel;
   pwnat = pkgs.pwnat;
   python3-capstone = pkgs.python3Packages.capstone;
   python3-dfdatetime = cantfind;
@@ -299,7 +306,7 @@ in {
   rebind = cantfind;
   recon-ng = cantfind;
   recordmydesktop = cantfind;
-  recoverdm = cantfind;
+  recoverdm = pkgs.recoverdm;
   recoverjpeg = pkgs.recoverjpeg;
   redfang = pkgs.redfang;
   redsocks = pkgs.redsocks;
@@ -311,9 +318,11 @@ in {
   rfcat = pkgs.python312Packages.rfcat;
   rfdump = cantfind;
   rfkill = pkgs.utillinux;
+  #https://github.com/NixOS/nixpkgs/pull/289762
   rifiuti = cantfind;
   rifiuti2 = cantfind;
   rizin-cutter = pkgs.cutter;
+  #https://github.com/NixOS/nixpkgs/pull/289850
   rkhunter = cantfind;
   rsakeyfind = cantfind;
   rsmangler = cantfind;
@@ -325,12 +334,12 @@ in {
   rz-ghidra = pkgs.rizinPlugins.rz-ghidra;
   safecopy = pkgs.safecopy;
   sakis3g = cantfind;
-  samdump2 = cantfind;
+  samdump2 = pkgs.samdump2;
   sandsifter = cantfind;
+  #https://github.com/NixOS/nixpkgs/pull/290280
   sbd = cantfind;
   scalpel = pkgs.scalpel;
-  # https://github.com/NixOS/nixpkgs/pull/288039
-  scrounge-ntfs = todo;
+  scrounge-ntfs = pkgs.scrounge-ntfs;
   sctpscan = cantfind;
   seclists = pkgs.seclists;
   secure-socket-funneling-windows-binaries = cantfind;
@@ -402,7 +411,7 @@ in {
   unhide = cantfind;
   unicornscan = cantfind;
   uniscan = cantfind;
-  unix-privesc-check = cantfind;
+  unix-privesc-check = pkgs.unix-privesc-check;
   "unrar | unar" = pkgs.unrar;
   upx-ucl = pkgs.upx;
   urlcrazy = cantfind;
