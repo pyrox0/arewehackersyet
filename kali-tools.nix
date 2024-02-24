@@ -367,7 +367,7 @@ in {
   spectools = cantfind;
   spiderfoot = cantfind;
   spike = pkgs.spike;
-  spooftooph = cantfind;
+  spooftooph = pkgs.spooftooph;
   sqldict = cantfind;
   sqlitebrowser = pkgs.sqlitebrowser;
   sqlmap = pkgs.sqlmap;
