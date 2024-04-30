@@ -23,7 +23,7 @@ in {
   armitage = pkgs.armitage;
   asleap = pkgs.asleap;
   assetfinder = pkgs.assetfinder;
-  autopsy = cantfind;
+  autopsy = pkgs.autopsy;
   backdoor-factory = cantfind;
   bed = cantfind;
   beef-xss = todo;
@@ -79,11 +79,11 @@ in {
   default-mysql-server = cantfind;
   defectdojo = cantfind;
   dex2jar = pkgs.dex2jar;
-  dhcpig = cantfind;
+  dhcpig = pkgs.dhcpig;
   dirb = pkgs.dirb;
   dirbuster = cantfind;
   dmitry = pkgs.dmitry;
-  dns2tcp = cantfind;
+  dns2tcp = pkgs.dns2tcp;
   dnschef = pkgs.dnschef;
   dnsenum = pkgs.dnsenum;
   dnsmap = cantfind;
@@ -151,7 +151,7 @@ in {
   hashcat-utils = pkgs.hashcat-utils;
   hashdeep = pkgs.hashdeep;
   #https://github.com/NixOS/nixpkgs/pull/288654
-  hashid = cantfind;
+  hashid = pkgs.hashid;
   hashrat = pkgs.hashrat;
   #https://github.com/NixOS/nixpkgs/pull/288674
   hb-honeypot = cantfind;
@@ -205,7 +205,7 @@ in {
   mac-robber = cantfind;
   macchanger = pkgs.macchanger;
   #https://github.com/NixOS/nixpkgs/pull/289533
-  magicrescue = cantfind;
+  magicrescue = pkgs.magicrescue;
   maltego = pkgs.maltego;
   maryam = cantfind;
   maskprocessor = cantfind;
@@ -325,7 +325,7 @@ in {
   #https://github.com/NixOS/nixpkgs/pull/289850
   rkhunter = cantfind;
   rsakeyfind = cantfind;
-  rsmangler = cantfind;
+  rsmangler = pkgs.rsmangler;
   rtlsdr-scanner = cantfind;
   rtpbreak = cantfind;
   rtpflood = cantfind;
@@ -407,7 +407,7 @@ in {
   udptunnel = pkgs.udptunnel;
   uhd-host = todo;
   uhd-images = todo;
-  undbx = cantfind;
+  undbx = pkgs.undbx;
   unhide = cantfind;
   unicornscan = cantfind;
   uniscan = cantfind;
