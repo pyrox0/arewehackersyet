@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: cachix/install-nix-action@v25
+    - uses: cachix/install-nix-action@v27
     - name: build
       run: nix-build ./stats.nix
