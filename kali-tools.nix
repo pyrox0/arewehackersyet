@@ -7,12 +7,14 @@ let
 in {
   
   "0trace" = cantfind;
+  "7zip" = pkgs.p7zip;
   "arping | iputils-arping" = pkgs.arping;
   "afl++" = pkgs.aflplusplus;
+  above = cantfind;
   ace-voip = cantfind;
   aesfix = pkgs.aesfix;
   aeskeyfind = pkgs.aeskeyfind;
-  afflib-tools = cantfind;
+  afflib-tools = pkgs.afflib;
   aircrack-ng = pkgs.aircrack-ng;
   airgeddon = pkgs.airgeddon;
   amass = pkgs.amass;
@@ -26,15 +28,15 @@ in {
   autopsy = pkgs.autopsy;
   backdoor-factory = cantfind;
   bed = cantfind;
-  beef-xss = todo;
+  beef-xss = cantfind;
   bettercap = pkgs.bettercap;
   binwalk = pkgs.python3Packages.binwalk-full;
-  blue-hydra = todo;
-  bluelog = todo;
-  blueranger = todo;
-  bluesnarfer = todo;
+  blue-hydra = cantfind;
+  bluelog = cantfind;
+  blueranger = cantfind;
+  bluesnarfer = pkgs.bluesnarfer;
   bluez = pkgs.bluez;
-  bluez-hcidump = todo;
+  bluez-hcidump = cantfind;
   braa = pkgs.braa;
   btscanner = cantfind;
   bulk-extractor = pkgs.bulk_extractor;
@@ -65,28 +67,28 @@ in {
   creddump7 = cantfind;
   crunch = pkgs.crunch;
   cryptsetup = pkgs.cryptsetup;
-  cryptsetup-initramfs = todo;
-  cryptsetup-nuke-password = todo;
+  cryptsetup-initramfs = pkgs.cryptsetup;
+  cryptsetup-nuke-password = cantfind;
   cutecom = pkgs.cutecom;
   cutycapt = cantfind;
   cymothoa = cantfind;
   darkstat = pkgs.darkstat;
   davtest = pkgs.davtest;
-  dbd = cantfind;
+  dbd = pkgs.dbd;
   dc3dd = pkgs.dc3dd;
   dcfldd = pkgs.dcfldd;
   ddrescue = pkgs.ddrescue;
-  default-mysql-server = cantfind;
+  default-mysql-server = pkgs.mariadb;
   defectdojo = cantfind;
   dex2jar = pkgs.dex2jar;
   dhcpig = pkgs.dhcpig;
   dirb = pkgs.dirb;
-  dirbuster = cantfind;
+  dirbuster = pkgs.dirbuster;
   dmitry = pkgs.dmitry;
   dns2tcp = pkgs.dns2tcp;
   dnschef = pkgs.dnschef;
   dnsenum = pkgs.dnsenum;
-  dnsmap = cantfind;
+  dnsmap = pkgs.dnsmap;
   dnsrecon = pkgs.dnsrecon;
   dnstracer = pkgs.dnstracer;
   dnswalk = cantfind;
@@ -100,15 +102,15 @@ in {
   enum4linux = pkgs.enum4linux;
   enumiax = cantfind;
   "ettercap-graphical | ettercap-text-only" = pkgs.ettercap;
-  ewf-tools = cantfind;
-  exe2hexbat = cantfind;
+  ewf-tools = pkgs.libewf;
+  exe2hexbat = pkgs.exe2hex;
   exifprobe = pkgs.exifprobe;
   exiv2 = pkgs.exiv2;
   exploitdb = pkgs.exploitdb;
   ext3grep = pkgs.ext3grep;
   ext4magic = pkgs.ext4magic;
   extundelete = pkgs.extundelete;
-  eyewitness = cantfind;
+  eyewitness = eyewitness;
   faraday = pkgs.faraday;
   fcrackzip = pkgs.fcrackzip;
   fern-wifi-cracker = cantfind;
@@ -136,9 +138,9 @@ in {
   gparted = pkgs.gparted;
   gpp-decrypt = cantfind;
   gqrx-sdr = pkgs.gqrx;
-  gr-air-modes = todo;
-  gr-iqbal = todo;
-  gr-osmosdr = pkgs.gnuradio3_9.pkgs.osmosdr; #removed required python2 => pkgs.gnuradio3_7.pkgs.osmosdr;
+  gr-air-modes = cantfind;
+  gr-iqbal = cantfind;
+  gr-osmosdr = pkgs.gnuradioPackages.osmosdr;
   grokevt = cantfind;
   #https://github.com/NixOS/nixpkgs/pull/278529
   guymager = cantfind;
@@ -154,7 +156,7 @@ in {
   hashid = pkgs.hashid;
   hashrat = pkgs.hashrat;
   #https://github.com/NixOS/nixpkgs/pull/288674
-  hb-honeypot = cantfind;
+  hb-honeypot = pkgs.hb-honeypot;
   heartleech = cantfind;
   hexinject = cantfind;
   hostapd-wpe = cantfind;
@@ -187,11 +189,9 @@ in {
   kalibrate-rtl = pkgs.kalibrate-rtl;
   killerbee = pkgs.killerbee;
   kismet = pkgs.kismet;
-  #https://github.com/NixOS/nixpkgs/pull/289374
-  laudanum = cantfind;
-  # Source : https://github.com/craig/ge.mine.nu/tree/master/lbd
+  laudanum = pkgs.laudanum;
   #https://github.com/NixOS/nixpkgs/pull/289525
-  lbd = cantfind;
+  lbd = pkgs.lbd;
   legion = cantfind;
   libfindrtp = cantfind;
   libfreefare-bin = pkgs.libfreefare;
@@ -202,7 +202,7 @@ in {
   lvm2 = pkgs.lvm2;
   lynis = pkgs.lynis;
   #https://github.com/NixOS/nixpkgs/pull/289532
-  mac-robber = cantfind;
+  mac-robber = pkgs.mac-robber;
   macchanger = pkgs.macchanger;
   #https://github.com/NixOS/nixpkgs/pull/289533
   magicrescue = pkgs.magicrescue;
@@ -212,7 +212,7 @@ in {
   masscan = pkgs.masscan;
   md5deep = pkgs.hashdeep;
   mdbtools = pkgs.mdbtools;
-  mdk3 = cantfind;
+  mdk3 = pkgs.mdk3-master;
   mdk4 = pkgs.mdk4;
   medusa = pkgs.medusa;
   memdump = cantfind;
@@ -222,11 +222,11 @@ in {
   mfcuk = pkgs.mfcuk;
   mfoc = pkgs.mfoc;
   mfterm = cantfind;
-  mimikatz = cantfind;
+  mimikatz = pkgs.mimikatz;
   minicom = pkgs.minicom;
   miredo = pkgs.miredo;
   #https://github.com/NixOS/nixpkgs/pull/289535
-  missidentify = cantfind;
+  missidentify = pkgs.missidentify;
   mitmproxy = pkgs.mitmproxy;
   msfpc = pkgs.msfpc;
   multimon-ng = pkgs.multimon-ng;
@@ -234,10 +234,11 @@ in {
   nasm = pkgs.nasm;
   nasty = pkgs.nasty;
   nbtscan = pkgs.nbtscan;
-  ncat = cantfind;
-  ncat-w32 = cantfind;
+  ncat = pkgs.nmap;
+  ncat-w32 = broken;
   ncrack = pkgs.ncrack;
   netdiscover = pkgs.netdiscover;
+  netexec = pkgs.netexec;
   netmask = pkgs.netmask;
   netsniff-ng = pkgs.netsniff-ng;
   nikto = pkgs.nikto;
@@ -250,11 +251,11 @@ in {
   onesixtyone = pkgs.onesixtyone;
   openocd = pkgs.openocd;
   openvas = cantfind;
-  ophcrack = cantfind;
-  ophcrack-cli = cantfind;
+  ophcrack = pkgs.ophcrack;
+  ophcrack-cli = pkgs.ophcrack-cli;
   oscanner = cantfind;
   osrframework = cantfind;
-  outguess = cantfind;
+  outguess = pkgs.outguess;
   owasp-mantra-ff = cantfind;
   p0f = pkgs.p0f;
   p7zip-full = pkgs.p7zip;
@@ -277,7 +278,7 @@ in {
   pixiewps = pkgs.pixiewps;
   plaso = cantfind;
   plecost = pkgs.plecost;
-  polenum = cantfind;
+  polenum = pkgs.polenum;
   powercat = cantfind;
   powersploit = pkgs.powersploit;
   protos-sip = cantfind;
@@ -285,7 +286,7 @@ in {
   proxychains = pkgs.proxychains;
   proxychains4 = pkgs.proxychains;
   proxytunnel = cantfind;
-  pst-utils = todo;
+  pst-utils = pkgs.libpst;
   ptunnel = pkgs.ptunnel;
   pwnat = pkgs.pwnat;
   python3-capstone = pkgs.python3Packages.capstone;
@@ -295,13 +296,14 @@ in {
   python3-distorm3 = pkgs.python3Packages.distorm3;
   qemu = pkgs.qemu_full;
   qemu-system-x86 = pkgs.qemu;
-  qemu-user = cantfind;
-  qsslcaudit = todo;
+  qemu-user = pkgs.qemu-user;
+  qsslcaudit = cantfind;
   radare2 = pkgs.radare2;
   radare2-cutter = pkgs.radare2-cutter;
-  rainbowcrack = cantfind;
+  rainbowcrack = pkgs.rainbowcrack;
   rarcrack = pkgs.rarcrack;
   rcracki-mt = cantfind;
+  readpe = cantfind;
   reaver = pkgs.reaverwps;
   rebind = cantfind;
   recon-ng = cantfind;
@@ -316,10 +318,10 @@ in {
   rephrase = cantfind;
   responder = pkgs.responder;
   rfcat = pkgs.python312Packages.rfcat;
-  rfdump = cantfind;
+  rfdump = pkgs.rfdump;
   rfkill = pkgs.utillinux;
   #https://github.com/NixOS/nixpkgs/pull/289762
-  rifiuti = cantfind;
+  rifiuti = pkgs.rifiuti;
   rifiuti2 = cantfind;
   rizin-cutter = pkgs.cutter;
   #https://github.com/NixOS/nixpkgs/pull/289850
@@ -342,7 +344,7 @@ in {
   scrounge-ntfs = pkgs.scrounge-ntfs;
   sctpscan = cantfind;
   seclists = pkgs.seclists;
-  secure-socket-funneling-windows-binaries = cantfind;
+  secure-socket-funneling-windows-binaries = broken;
   sentrypeer = cantfind;
   #https://github.com/trustedsec/social-engineer-toolkit/
   set = cantfind;
@@ -383,7 +385,7 @@ in {
   statsprocessor = cantfind;
   steghide = pkgs.steghide;
   stegsnow = cantfind;
-  stunnel4 = cantfind;
+  stunnel4 = pkgs.stunnel; # we have stunnel 5 :shrug:
   #https://github.com/hemp3l/sucrack
   sucrack = cantfind;
   swaks = pkgs.swaks;
@@ -392,12 +394,13 @@ in {
   tcpflow = pkgs.tcpflow;
   tcpick = cantfind;
   tcpreplay = pkgs.tcpreplay;
-  termineter = cantfind;
-  tftpd32 = cantfind;
+  termineter = pkgs.termineter;
+  tftpd32 = broken;
   thc-ipv6 = pkgs.thc-ipv6;
   thc-pptp-bruter = cantfind;
   thc-ssl-dos = cantfind;
   theharvester = pkgs.theharvester;
+  tightvnc = broken;
   tiger = cantfind;
   tlssled = cantfind;
   tnscmd10g = cantfind;
@@ -405,10 +408,10 @@ in {
   twofi = cantfind;
   ubertooth = pkgs.ubertooth;
   udptunnel = pkgs.udptunnel;
-  uhd-host = todo;
-  uhd-images = todo;
+  uhd-host = pkgs.uhd;
+  uhd-images = cantfind;
   undbx = pkgs.undbx;
-  unhide = cantfind;
+  unhide = pkgs.unhide;
   unicornscan = cantfind;
   uniscan = cantfind;
   unix-privesc-check = pkgs.unix-privesc-check;
@@ -418,7 +421,7 @@ in {
   veil = cantfind;
   vinetto = cantfind;
   voiphopper = cantfind;
-  volatility = broken; # removed/broken
+  volatility = pkgs.volatility3;
   wafw00f = pkgs.wafw00f;
   wapiti = pkgs.wapiti;
   watobo = cantfind;
@@ -427,24 +430,25 @@ in {
   webscarab = cantfind;
   webshells = cantfind;
   #https://github.com/epinna/weevely3
-  weevely = cantfind;
+  weevely = pkgs.weevely;
   wfuzz = pkgs.wfuzz;
   whatweb = pkgs.whatweb;
   wifi-honey = cantfind;
   wifite = pkgs.wifite2;
-  windows-binaries = cantfind;
+  windows-binaries = broken;
   windows-privesc-check = cantfind;
   winregfs = cantfind;
   wireshark = pkgs.wireshark;
   #https://github.com/byt3bl33d3r/WitnessMe
-  witnessme = cantfind;
+  witnessme = pkgs.witnessme;
   wordlists = pkgs.wordlists;
   wpscan = pkgs.wpscan;
   xmount = cantfind;
   xplico = cantfind;
   xprobe = cantfind;
-  xsser = pkgs.xsser;
+  xsser = cantfind;
   yara = pkgs.yara;
   yersinia = pkgs.yersinia;
   zaproxy = pkgs.zap;
+  zenmap = pkgs.nmap;
 }

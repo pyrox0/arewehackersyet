@@ -28,7 +28,6 @@ rec {
     tcpdump = pkgs.tcpdump;
     testdisk = pkgs.testdisk;
     tftp = pkgs.netkittftp;
-    tightvncserver = pkgs.tightvnc;
     tmux = pkgs.tmux;
     unrar = pkgs.unrar;
     vim = pkgs.vim;
