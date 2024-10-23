@@ -4,6 +4,7 @@ let
   todo = "todo";
   cantfind = "cantfind";
   broken = "broken";
+  not-applicable = "not-applicable";
 in {
   
   "0trace" = cantfind;
@@ -235,7 +236,7 @@ in {
   nasty = pkgs.nasty;
   nbtscan = pkgs.nbtscan;
   ncat = pkgs.nmap;
-  ncat-w32 = broken;
+  ncat-w32 = not-applicable;
   ncrack = pkgs.ncrack;
   netdiscover = pkgs.netdiscover;
   netexec = pkgs.netexec;
@@ -247,7 +248,7 @@ in {
   nmap = pkgs.nmap;
   oclgausscrack = cantfind;
   ohrwurm = cantfind;
-  ollydbg = cantfind;
+  ollydbg = not-applicable;
   onesixtyone = pkgs.onesixtyone;
   openocd = pkgs.openocd;
   openvas = cantfind;
@@ -344,7 +345,7 @@ in {
   scrounge-ntfs = pkgs.scrounge-ntfs;
   sctpscan = cantfind;
   seclists = pkgs.seclists;
-  secure-socket-funneling-windows-binaries = broken;
+  secure-socket-funneling-windows-binaries = not-applicable;
   sentrypeer = cantfind;
   #https://github.com/trustedsec/social-engineer-toolkit/
   set = cantfind;
@@ -395,7 +396,7 @@ in {
   tcpick = cantfind;
   tcpreplay = pkgs.tcpreplay;
   termineter = pkgs.termineter;
-  tftpd32 = broken;
+  tftpd32 = not-applicable;
   thc-ipv6 = pkgs.thc-ipv6;
   thc-pptp-bruter = cantfind;
   thc-ssl-dos = cantfind;
@@ -409,7 +410,7 @@ in {
   ubertooth = pkgs.ubertooth;
   udptunnel = pkgs.udptunnel;
   uhd-host = pkgs.uhd;
-  uhd-images = cantfind;
+  uhd-images = not-applicable;
   undbx = pkgs.undbx;
   unhide = pkgs.unhide;
   unicornscan = cantfind;
@@ -428,14 +429,14 @@ in {
   wce = cantfind;
   webacoo = cantfind;
   webscarab = cantfind;
-  webshells = cantfind;
+  webshells = not-applicable;
   #https://github.com/epinna/weevely3
   weevely = pkgs.weevely;
   wfuzz = pkgs.wfuzz;
   whatweb = pkgs.whatweb;
   wifi-honey = cantfind;
   wifite = pkgs.wifite2;
-  windows-binaries = broken;
+  windows-binaries = not-applicable;
   windows-privesc-check = cantfind;
   winregfs = cantfind;
   wireshark = pkgs.wireshark;

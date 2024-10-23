@@ -26,7 +26,10 @@
                     Packages in <span class="text-warning">yellow</span> could have been previously packaged and appear to be broken/removed (deprecated/security risks, i.e. python2,etc.)
                 </li>
                 <li>
-                    Packages in <span class="text-secondary">gray</span> haven't been checked yet
+                    Packages in <span class="text-info">blue</span> haven't been checked yet
+                </li>
+                <li>
+                    Packages in <span class="text-secondary">gray</span> are not applicable to Nix(windows binaries, various firmwares, etc)
                 </li>
             </ul>
 
@@ -70,7 +73,7 @@
                                 aria-valuemin="0" aria-valuemax="100"
                                 style="width: <%= 100 * packages.count { |_, val|val == "todo" } / packages.count.to_f %>%"
                                 >
-                                  <div class="progress-bar bg-secondary"><%= packages.count { |_, val| val == "todo" } %></div>
+                                  <div class="progress-bar bg-info"><%= packages.count { |_, val| val == "todo" } %></div>
                               </div>
                               <div class="progress" role="progressbar" aria-label="Broken packages"
                                 aria-valuenow="<%= 100 * packages.count { |_, val|val == "broken" } / packages.count.to_f %>"
@@ -78,6 +81,13 @@
                                 style="width: <%= 100 * packages.count { |_, val|val == "broken" } / packages.count.to_f %>%"
                                 >
                                   <div class="progress-bar bg-warning text-dark"><%= packages.count { |_, val| val == "broken" } %></div>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="Not applicable packages"
+                                aria-valuenow="<%= 100 * packages.count { |_, val|val == "not-applicable" } / packages.count.to_f %>"
+                                aria-valuemin="0" aria-valuemax="100" 
+                                style="width: <%= 100 * packages.count { |_, val|val == "not-applicable" } / packages.count.to_f %>%"
+                                >
+                                  <div class="progress-bar bg-secondary"><%= packages.count { |_, val| val == "not-applicable" } %></div>
                               </div>
                             </div>
                           </div>
@@ -95,6 +105,8 @@
                                     <tbody>
                                         <% packages.each do | package_name, package_val | %>
                                             <% if package_val == "todo" %>
+                                              <tr class="table-info">
+                                            <% elsif package_val == "not-applicable" %>
                                                 <tr class="table-secondary">
                                             <% elsif package_val == "cantfind" %>
                                                 <tr class="table-danger">
