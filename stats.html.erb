@@ -1,17 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
         <title>Are We Hackers Yet?</title>
     </head>
     <body>
-        <div class="container">
+        <main class="container">
             <h1>Are We Hackers Yet?</h1>
             <p class="lead">Tracking the availability of Kali Linux packages in NixOS</p>
             <ul>
@@ -30,7 +31,7 @@
             </ul>
 
             <p>
-            Contribute to the tracker at <a href="https://github.com/AkechiShiro/arewehackersyet">github.com/AkechiShiro/arewehackersyet</a> also check <a href="https://fabaff.github.io/nix-security-box/">fabaff.github.io/nix-security-box/</a> which contains other security related tools, some are not in this tracker.
+            Contribute to the tracker at <a href="https://github.com/pyrox0/arewehackersyet">github.com/pyrox0/arewehackersyet</a> also check <a href="https://fabaff.github.io/nix-security-box/">fabaff.github.io/nix-security-box/</a> which contains other security related tools, some are not in this tracker.
             </p>
 
             <p>
@@ -41,26 +42,49 @@
             </p>
             <div class="accordion">
                 <% groups.each do | group_name, packages | %>
-                    <div class="card">
-                        <div class="card-header row align-items-center" style="padding-left: 0; padding-bottom:0; padding-top: 0; padding-right: 15px; cursor: pointer;" data-toggle="collapse" data-target="#collapse-<%= h(group_name) %>">
-                            <h2 class="mb-0 col">
-                                <button class="btn btn-link btn-block text-left" type="button" >
-                                    <%= h(group_name) %>
-                                </button>
-                            </h2>
-
-                            <div class="col">
-                                <div class="progress">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: <%= 100 * packages.count { |_, val| val != "todo" && val != "cantfind" } / packages.count.to_f %>%"><%= packages.count { |_, val| val != "todo" && val != "cantfind" } %></div>
-                                    <div class="progress-bar bg-danger" role="progressbar" style="width: <%= 100 * packages.count { |_, val|val == "cantfind" } / packages.count.to_f %>%"><%= packages.count { |_, val| val == "cantfind" } %></div>
-                                    <div class="progress-bar bg-secondary" role="progressbar" style="width: <%= 100 * packages.count { |_, val|val == "todo" } / packages.count.to_f %>%"><%= packages.count { |_, val| val == "todo" } %></div>
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: <%= 100 * packages.count { |_, val|val == "broken" } / packages.count.to_f %>%"><%= packages.count { |_, val| val == "broken" } %></div>
-                                </div>
+                    <div class="accordion-item">
+                      <div class="accordion-header row align-items-center px-3 py-2" 
+                        style="cursor: pointer;"
+                        data-bs-toggle="collapse" data-bs-target="#collapse-<%= h(group_name) %>"
+                        aria-controls="collapse-<%= h(group_name) %>"
+                      >
+                          <p class="mb-0 fs-3 col"><%= h(group_name) %></p>
+                          <div class="col">
+                            <div class="progress-stacked">
+                              <div class="progress" role="progressbar" aria-label="packaged packages"
+                                aria-valuenow="<%= 100 * packages.count { |_, val| val != "todo" && val != "cantfind" } / packages.count.to_f %>"
+                                aria-valuemin="0" aria-valuemax="100"
+                                style="width: <%= 100 * packages.count { |_, val| val != "todo" && val != "cantfind" } / packages.count.to_f %>%"
+                                >
+                                  <div class="progress-bar bg-success" ><%= packages.count { |_, val| val != "todo" && val != "cantfind" } %></div>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="not found packages"
+                                aria-valuenow="<%= 100 * packages.count { |_, val|val == "cantfind" } / packages.count.to_f %>" 
+                                aria-valuemin="0" aria-valuemax="100"
+                                style="width: <%= 100 * packages.count { |_, val|val == "cantfind" } / packages.count.to_f %>%"
+                                >
+                                  <div class="progress-bar bg-danger" ><%= packages.count { |_, val| val == "cantfind" } %></div>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="Todo packages"
+                                aria-valuenow="<%= 100 * packages.count { |_, val|val == "todo" } / packages.count.to_f %>"
+                                aria-valuemin="0" aria-valuemax="100"
+                                style="width: <%= 100 * packages.count { |_, val|val == "todo" } / packages.count.to_f %>%"
+                                >
+                                  <div class="progress-bar bg-secondary"><%= packages.count { |_, val| val == "todo" } %></div>
+                              </div>
+                              <div class="progress" role="progressbar" aria-label="Broken packages"
+                                aria-valuenow="<%= 100 * packages.count { |_, val|val == "broken" } / packages.count.to_f %>"
+                                aria-valuemin="0" aria-valuemax="100" 
+                                style="width: <%= 100 * packages.count { |_, val|val == "broken" } / packages.count.to_f %>%"
+                                >
+                                  <div class="progress-bar bg-warning text-dark"><%= packages.count { |_, val| val == "broken" } %></div>
+                              </div>
                             </div>
+                          </div>
                         </div>
-                        <div class="collapse" id="collapse-<%= h(group_name) %>">
+                        <div class="accordion-collapse collapse" id="collapse-<%= h(group_name) %>">
                             <div class="card-body" style="padding:0">
-                                <table class="table" style="margin-bottom: 0">
+                                <table class="table table-striped-columns table-bordered table-dark table-responsive">
                                     <thead>
                                         <tr>
                                             <th scope="col">Kali Package</th>
@@ -71,13 +95,13 @@
                                     <tbody>
                                         <% packages.each do | package_name, package_val | %>
                                             <% if package_val == "todo" %>
-                                                <tr class="alert-secondary">
+                                                <tr class="table-secondary">
                                             <% elsif package_val == "cantfind" %>
-                                                <tr class="alert-danger">
+                                                <tr class="table-danger">
                                             <% elsif package_val == "broken" %>
-                                                <tr class="alert-warning">
+                                                <tr class="table-warning">
                                             <% else %>
-                                                <tr class="alert-success">
+                                                <tr class="table-success">
                                             <% end %>
                                                 <th scope="row"><%= package_name %></th>
                                                 <td><%= descs[package_name] %></td>
@@ -91,15 +115,11 @@
                     </div>
                 <% end %>
             </div>
-        </div>
+        </main>
         <div class="container">
           <h2> Credits </h2>
-          <p>This tracker was originally made and maintained by <a href="https://github.com/JJJollyjim">JJJollyjim</a>.</p>
+          <p>This tracker was originally made and maintained by <a href="https://github.com/JJJollyjim">JJJollyjim</a>, then <a href="https://github.com/AkechiShiro">AkechiShiro</a>.</p>
        </div>
-
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </body>
 </html>
 
