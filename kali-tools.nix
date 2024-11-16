@@ -143,8 +143,8 @@ in {
   gr-iqbal = cantfind;
   gr-osmosdr = pkgs.gnuradioPackages.osmosdr;
   grokevt = cantfind;
-  #https://github.com/NixOS/nixpkgs/pull/278529
-  guymager = cantfind;
+  # https://github.com/NixOS/nixpkgs/pull/278529
+  guymager = pkgs.guymager;
   gvm = cantfind;
   hackrf = pkgs.hackrf;
   hakrawler = pkgs.hakrawler;
