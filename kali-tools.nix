@@ -153,10 +153,10 @@ in {
   hashcat = pkgs.hashcat;
   hashcat-utils = pkgs.hashcat-utils;
   hashdeep = pkgs.hashdeep;
-  #https://github.com/NixOS/nixpkgs/pull/288654
+  # https://github.com/NixOS/nixpkgs/pull/288654
   hashid = pkgs.hashid;
   hashrat = pkgs.hashrat;
-  #https://github.com/NixOS/nixpkgs/pull/288674
+  # https://github.com/NixOS/nixpkgs/pull/288674
   hb-honeypot = pkgs.hb-honeypot;
   heartleech = cantfind;
   hexinject = cantfind;
@@ -192,7 +192,7 @@ in {
   killerbee = pkgs.killerbee;
   kismet = pkgs.kismet;
   laudanum = pkgs.laudanum;
-  #https://github.com/NixOS/nixpkgs/pull/289525
+  # https://github.com/NixOS/nixpkgs/pull/289525
   lbd = pkgs.lbd;
   legion = cantfind;
   libfindrtp = cantfind;
@@ -203,10 +203,10 @@ in {
   lime-forensics = cantfind;
   lvm2 = pkgs.lvm2;
   lynis = pkgs.lynis;
-  #https://github.com/NixOS/nixpkgs/pull/289532
+  # https://github.com/NixOS/nixpkgs/pull/289532
   mac-robber = pkgs.mac-robber;
   macchanger = pkgs.macchanger;
-  #https://github.com/NixOS/nixpkgs/pull/289533
+  # https://github.com/NixOS/nixpkgs/pull/289533
   magicrescue = pkgs.magicrescue;
   maltego = pkgs.maltego;
   maryam = cantfind;
@@ -227,7 +227,7 @@ in {
   mimikatz = pkgs.mimikatz;
   minicom = pkgs.minicom;
   miredo = pkgs.miredo;
-  #https://github.com/NixOS/nixpkgs/pull/289535
+  # https://github.com/NixOS/nixpkgs/pull/289535
   missidentify = pkgs.missidentify;
   mitmproxy = pkgs.mitmproxy;
   msfpc = pkgs.msfpc;
@@ -322,11 +322,11 @@ in {
   rfcat = pkgs.python312Packages.rfcat;
   rfdump = pkgs.rfdump;
   rfkill = pkgs.utillinux;
-  #https://github.com/NixOS/nixpkgs/pull/289762
+  # https://github.com/NixOS/nixpkgs/pull/289762
   rifiuti = pkgs.rifiuti;
   rifiuti2 = cantfind;
   rizin-cutter = pkgs.cutter;
-  #https://github.com/NixOS/nixpkgs/pull/289850
+  # https://github.com/NixOS/nixpkgs/pull/289850
   rkhunter = cantfind;
   rsakeyfind = cantfind;
   rsmangler = pkgs.rsmangler;
@@ -340,7 +340,7 @@ in {
   sakis3g = cantfind;
   samdump2 = pkgs.samdump2;
   sandsifter = cantfind;
-  #https://github.com/NixOS/nixpkgs/pull/290280
+  # https://github.com/NixOS/nixpkgs/pull/290280
   sbd = cantfind;
   scalpel = pkgs.scalpel;
   scrounge-ntfs = pkgs.scrounge-ntfs;
@@ -348,7 +348,7 @@ in {
   seclists = pkgs.seclists;
   secure-socket-funneling-windows-binaries = not-applicable;
   sentrypeer = cantfind;
-  #https://github.com/trustedsec/social-engineer-toolkit/
+  # https://github.com/trustedsec/social-engineer-toolkit/
   set = cantfind;
   sfuzz = cantfind;
   shellnoob = pkgs.shellnoob;
@@ -388,7 +388,7 @@ in {
   steghide = pkgs.steghide;
   stegsnow = cantfind;
   stunnel4 = pkgs.stunnel; # we have stunnel 5 :shrug:
-  #https://github.com/hemp3l/sucrack
+  # https://github.com/hemp3l/sucrack
   sucrack = cantfind;
   swaks = pkgs.swaks;
   t50 = cantfind;
@@ -431,7 +431,7 @@ in {
   webacoo = cantfind;
   webscarab = cantfind;
   webshells = not-applicable;
-  #https://github.com/epinna/weevely3
+  # https://github.com/epinna/weevely3
   weevely = pkgs.weevely;
   wfuzz = pkgs.wfuzz;
   whatweb = pkgs.whatweb;
@@ -441,7 +441,7 @@ in {
   windows-privesc-check = cantfind;
   winregfs = cantfind;
   wireshark = pkgs.wireshark;
-  #https://github.com/byt3bl33d3r/WitnessMe
+  # https://github.com/byt3bl33d3r/WitnessMe
   witnessme = pkgs.witnessme;
   wordlists = pkgs.wordlists;
   wpscan = pkgs.wpscan;
