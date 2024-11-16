@@ -181,7 +181,8 @@ in {
   jadx = pkgs.jadx;
   javasnoop = cantfind;
   jboss-autopwn = cantfind;
-  jd-gui = pkgs.jd-gui;
+  # https://github.com/NixOS/nixpkgs/pull/352422
+  jd-gui = broken;
   john = pkgs.john;
   johnny = pkgs.johnny;
   joomscan = pkgs.joomscan;
