@@ -31,7 +31,7 @@ in {
   bed = cantfind;
   beef-xss = cantfind;
   bettercap = pkgs.bettercap;
-  binwalk = pkgs.python3Packages.binwalk-full;
+  binwalk = pkgs.binwalk;
   blue-hydra = cantfind;
   bluelog = cantfind;
   blueranger = cantfind;
