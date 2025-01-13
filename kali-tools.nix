@@ -33,6 +33,7 @@ in {
   bettercap = pkgs.bettercap;
   binwalk = pkgs.binwalk;
   blue-hydra = cantfind;
+  # https://github.com/NixOS/nixpkgs/pull/371343
   bluelog = cantfind;
   blueranger = cantfind;
   bluesnarfer = pkgs.bluesnarfer;
@@ -210,7 +211,8 @@ in {
   magicrescue = pkgs.magicrescue;
   maltego = pkgs.maltego;
   maryam = cantfind;
-  maskprocessor = cantfind;
+  # https://github.com/NixOS/nixpkgs/pull/371349
+  maskprocessor = pkgs.maskprocessor;
   masscan = pkgs.masscan;
   md5deep = pkgs.hashdeep;
   mdbtools = pkgs.mdbtools;
