@@ -28,7 +28,7 @@ in {
   assetfinder = pkgs.assetfinder;
   autopsy = pkgs.autopsy;
   backdoor-factory = cantfind;
-  bed = cantfind;
+  bed = pkgs.doona;
   beef-xss = cantfind;
   bettercap = pkgs.bettercap;
   binwalk = pkgs.binwalk;
@@ -100,7 +100,7 @@ in {
   dsniff = pkgs.dsniff;
   dumpzilla = cantfind;
   eapmd5pass = cantfind;
-  edb-debugger = cantfind;
+  edb-debugger = nur.repos.bb010g.pkgs.edb-debugger;
   enum4linux = pkgs.enum4linux;
   enumiax = cantfind;
   "ettercap-graphical | ettercap-text-only" = pkgs.ettercap;
