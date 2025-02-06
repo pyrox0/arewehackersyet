@@ -372,7 +372,7 @@ in {
   snmpcheck = pkgs.net-snmp;
   spectools = cantfind;
   spiderfoot = cantfind;
-  spike = pkgs.spike;
+  spike = cantfind;
   spooftooph = pkgs.spooftooph;
   sqldict = cantfind;
   sqlitebrowser = pkgs.sqlitebrowser;
