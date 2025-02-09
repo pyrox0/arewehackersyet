@@ -129,7 +129,7 @@ in {
   fping = pkgs.fping;
   fragrouter = cantfind;
   freeradius-wpe = cantfind;
-  freerdp2-x11 = pkgs.freerdp;
+  freerdp3-x11 = pkgs.freerdp;
   ftester = cantfind;
   fwbuilder = pkgs.fwbuilder;
   galleta = pkgs.galleta;
