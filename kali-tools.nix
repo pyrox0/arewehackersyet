@@ -8,10 +8,10 @@ let
 in {
   
   "0trace" = cantfind;
-  "7zip" = pkgs.p7zip;
+  "7zip" = pkgs._7zz;
   "arping | iputils-arping" = pkgs.arping;
   "afl++" = pkgs.aflplusplus;
-  above = cantfind;
+  above = pkgs.above;
   ace-voip = cantfind;
   aesfix = pkgs.aesfix;
   aeskeyfind = pkgs.aeskeyfind;
@@ -32,8 +32,8 @@ in {
   beef-xss = cantfind;
   bettercap = pkgs.bettercap;
   binwalk = pkgs.binwalk;
+  binwalk3 = pkgs.binwalk;
   blue-hydra = cantfind;
-  # https://github.com/NixOS/nixpkgs/pull/371343
   bluelog = cantfind;
   blueranger = cantfind;
   bluesnarfer = pkgs.bluesnarfer;
@@ -100,7 +100,7 @@ in {
   dsniff = pkgs.dsniff;
   dumpzilla = cantfind;
   eapmd5pass = cantfind;
-  edb-debugger = cantfind;
+  edb-debugger = pkgs.edb;
   enum4linux = pkgs.enum4linux;
   enumiax = cantfind;
   "ettercap-graphical | ettercap-text-only" = pkgs.ettercap;
@@ -187,6 +187,7 @@ in {
   john = pkgs.john;
   johnny = pkgs.johnny;
   joomscan = pkgs.joomscan;
+  # https://github.com/NixOS/nixpkgs/pull/398510
   jsql-injection = cantfind;
   kali-autopilot = cantfind;
   kalibrate-rtl = pkgs.kalibrate-rtl;
@@ -266,6 +267,7 @@ in {
   pack = cantfind;
   pack2 = cantfind;
   padbuster = pkgs.padbuster;
+  # https://github.com/NixOS/nixpkgs/pull/185031
   paros = cantfind;
   parted = pkgs.parted;
   pasco = pkgs.pasco;
@@ -310,7 +312,7 @@ in {
   readpe = cantfind;
   reaver = pkgs.reaverwps;
   rebind = cantfind;
-  recon-ng = cantfind;
+  recon-ng = pkgs.recon-ng;
   recordmydesktop = cantfind;
   recoverdm = pkgs.recoverdm;
   recoverjpeg = pkgs.recoverjpeg;
@@ -324,11 +326,11 @@ in {
   rfcat = pkgs.python312Packages.rfcat;
   rfdump = pkgs.rfdump;
   rfkill = pkgs.utillinux;
-  # https://github.com/NixOS/nixpkgs/pull/289762
   rifiuti = pkgs.rifiuti;
   rifiuti2 = cantfind;
+  rizin = pkgs.rizin;
   rizin-cutter = pkgs.cutter;
-  # https://github.com/NixOS/nixpkgs/pull/289850
+  # https://github.com/nixos/nixpkgs/pull/289850
   rkhunter = cantfind;
   rsakeyfind = cantfind;
   rsmangler = pkgs.rsmangler;
@@ -341,6 +343,7 @@ in {
   safecopy = pkgs.safecopy;
   sakis3g = cantfind;
   samdump2 = pkgs.samdump2;
+  # https://github.com/NixOS/nixpkgs/pull/412335
   sandsifter = cantfind;
   # https://github.com/NixOS/nixpkgs/pull/290280
   sbd = cantfind;
@@ -362,6 +365,7 @@ in {
   sipp = pkgs.sipp;
   sipsak = pkgs.sipsak;
   sipvicious = pkgs.sipvicious;
+  # https://github.com/NixOS/nixpkgs/pull/184990
   skipfish = cantfind;
   sleuthkit = pkgs.sleuthkit;
   slowhttptest = pkgs.slowhttptest;
@@ -388,6 +392,7 @@ in {
   sslyze = broken; # removed/broken
   statsprocessor = cantfind;
   steghide = pkgs.steghide;
+  stegosuite = cantfind;
   stegsnow = cantfind;
   stunnel4 = pkgs.stunnel; # we have stunnel 5 :shrug:
   # https://github.com/hemp3l/sucrack
@@ -417,6 +422,7 @@ in {
   undbx = pkgs.undbx;
   unhide = pkgs.unhide;
   unicornscan = cantfind;
+  # https://github.com/NixOS/nixpkgs/pull/185017
   uniscan = cantfind;
   unix-privesc-check = pkgs.unix-privesc-check;
   "unrar | unar" = pkgs.unrar;
