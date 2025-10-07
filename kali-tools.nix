@@ -28,7 +28,7 @@ in {
   assetfinder = pkgs.assetfinder;
   autopsy = pkgs.autopsy;
   backdoor-factory = cantfind;
-  bed = cantfind;
+  bed = pkgs.doona;
   beef-xss = cantfind;
   bettercap = pkgs.bettercap;
   binwalk = pkgs.binwalk;
